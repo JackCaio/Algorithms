@@ -19,7 +19,7 @@ const sub = (arr) => {
  * @param {Number} b 
  * @returns Multiplication of the elements
  */
-const mul = (a, b) => {
+const mul = (a, b = 1) => {
   return a * b;
 }
 
@@ -29,8 +29,8 @@ const mul = (a, b) => {
  * @param {Number} b 
  * @returns Division of the elements
  */
-const div = (a, b) => {
-  if(b === 0) return null;
+const div = (a, b = 1) => {
+  if(b === 0) throw new Error('There can not be a division with 0 dividend');
   return a / b;
 }
 
