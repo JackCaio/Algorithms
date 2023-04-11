@@ -34,15 +34,27 @@ const div = (a, b = 1) => {
   return a / b;
 }
 
-const calculatorMap = {
-  '+': sum,
-  '-': sub,
-  '*': mul,
-  '/': div
-}
+// const calculatorMap = {
+//   '+': sum,
+//   '-': sub,
+//   '*': mul,
+//   '/': div
+// }
 
-console.log(calculatorMap['+']([1, 2, 3, 5]));
-console.log(calculatorMap['-']([20, 2, 3, 5]));
-console.log(calculatorMap['*'](2, 4));
-console.log(calculatorMap['/'](6, 2));
-console.log(calculatorMap['/'](10, 0));
+// console.log(calculatorMap['+']([1, 2, 3, 5]));
+// console.log(calculatorMap['-']([20, 2, 3, 5]));
+// console.log(calculatorMap['*'](2, 4));
+// console.log(calculatorMap['/'](6, 2));
+// console.log(calculatorMap['/'](10, 0));
+
+const calculatorMap = new Map();
+calculatorMap.set('+', sum);
+calculatorMap.set('-', sub);
+calculatorMap.set('*', mul);
+calculatorMap.set('/', div);
+
+console.log(calculatorMap.get('+')([1, 2, 3, 5]));
+console.log(calculatorMap.get('-')([1, 2, 3, 5]));
+console.log(calculatorMap.get('*')(2, 4));
+console.log(calculatorMap.get('/')(6, 2));
+console.log(calculatorMap.get('/')(10, 0));
