@@ -13,7 +13,7 @@ const genId = () => {
 console.log(genId());
 
 /**
- * First function I could think of, really simple to understand
+ * First function I could think of, really straight forward
  * @returns Random ID in the format XXXX-AAAA-BBBB-CCCC
  */
 const genIdSimple = () => {
